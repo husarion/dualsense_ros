@@ -1,0 +1,8 @@
+# This file represents mapping of joystick data to sensor_msgs/Joy.axes array.  The numbers represent array indecies.
+# All objects have range [-127, 128]
+
+RX: 0
+RY: 1
+
+LX: 2
+LY: 3

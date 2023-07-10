@@ -1,0 +1,27 @@
+# This file represents mapping of button states to sensor_msgs/Joy.buttons_array. The numbers represent array indecies.
+# All of the undescribed buttons have values: 0 (not pressed), 1 (pressed)
+# Some buttons have described ranges
+SQUARE: 0
+TRIANGlE: 1
+CIRCLE: 2
+CROSS: 3
+
+DPADUP: 4
+DPADDOWN: 5
+DPADRIGHT: 6
+DPADLEFT: 7
+
+L1: 8
+L2: 9 # [0-255] How hard is the trigger pressed
+L2PRESSED: 10 # If trigger is pressed at all 
+L3: 11
+
+R1: 12
+R2: 13 # [0-255] How hard is the trigger pressed
+R2PRESSED: 14 # If trigger is pressed at all 
+R3: 15
+
+SHARE: 16
+OPTIONS: 17
+PS: 18
+MIC: 19
