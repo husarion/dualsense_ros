@@ -21,5 +21,6 @@ For further development of this package I strongly reccomend using [those exampl
  - Research if audio support is possible (I did not find it in the used library)
  - Handle gyroscope and accelerometer data and send it via topic ([this example, lines 33,34](https://github.com/flok/pydualsense/blob/master/examples/read_all_input_channels.py))
  - Handle battery level
+ - Package dockerization - once the package is finished, dockerize it in [this repository](https://github.com/husarion/dualsense-docker)
 
  This list is a guideline and NOT a list of requirements. Feel free to modify it as you like. 
