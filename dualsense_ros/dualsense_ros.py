@@ -7,22 +7,11 @@ from pydualsense import *
 from sensor_msgs.msg import Joy
 
 class DualsenseRosDriver(Node):
-    """
-    A class containing ROS2 wrapper around a pydualsense driver for PS5 Dualsense controller
-    ...
-
-    Attributes
-    ----------
-
-    Methods
-    -------
-
-    """
-
     def __init__(self): #TODO move node name to constuctor
         super().__init__('dualsense_ros_node')
         self._dualsense = pydualsense()
 
+        # Loading configuration files for button mapping
         with open("/home/s/ros2_ws/src/dualsense_ros/config/button_mapping.yaml") as config:
             try:
                 self._button_mapping = yaml.safe_load(config)
@@ -37,7 +26,7 @@ class DualsenseRosDriver(Node):
                 self.get_logger().warn("Failed to load joystick configuration")
         config.close()
                 
-                
+        # Base joy msg creation
         self._joy_msg  = Joy()
         self._joy_msg.buttons = [0] * len(self._button_mapping)
         self._joy_msg.axes = [.0] * len(self._joystick_mapping)
@@ -58,7 +47,6 @@ class DualsenseRosDriver(Node):
                
     def joy_publisher_timer_callback(self):
         
-        # TODO Put this part in a method ?
         self._joy_msg._buttons[self._button_mapping['SQUARE']]    = self._dualsense.state.square
         self._joy_msg._buttons[self._button_mapping['TRIANGlE']]  = self._dualsense.state.triangle
         self._joy_msg._buttons[self._button_mapping['CIRCLE']]    = self._dualsense.state.circle

@@ -13,12 +13,12 @@ DPADLEFT: 7
 
 L1: 8
 L2: 9 # [0-255] How hard is the trigger pressed
-L2PRESSED: 10 # If trigger is pressed at all 
+L2PRESSED: 10 # Is the trigger pressed at all 
 L3: 11
 
 R1: 12
 R2: 13 # [0-255] How hard is the trigger pressed
-R2PRESSED: 14 # If trigger is pressed at all 
+R2PRESSED: 14 # Is the trigger pressed at all 
 R3: 15
 
 SHARE: 16
